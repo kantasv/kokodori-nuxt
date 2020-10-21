@@ -48,10 +48,14 @@
 
 <script>
 export default {
-  data () {
-    return {
-      label1: 'テスト１',
-      label2: 'テスト２'
+  props: {
+    label1: {
+      type: String,
+      required: true
+    },
+    label2: {
+      type: String,
+      required: true
     }
   }
 }

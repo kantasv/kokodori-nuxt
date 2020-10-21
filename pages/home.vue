@@ -2,9 +2,8 @@
   <div class="container">
     <KokodoriHeader />
     <AdWrapper />
-    <FlexContainer />
-    <FlexContainer />
-
+    <FlexContainer label1="検索" label2="決済" />
+    <FlexContainer label1="イベント" label2="ランキング" />
     <div class="contact-us-wrapper">
       お問い合わせ
     </div>
