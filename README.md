@@ -1,20 +1,17 @@
 # kokodori
 
-## Build Setup
+# 使用技術
+Firebase
+ -Hosting
 
-```bash
-# install dependencies
-$ npm install
+Nuxt.js
+ single-file components
+ parent-child data interaction using props
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# For quick debug (Mac OS)
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+open build.command
+
+```

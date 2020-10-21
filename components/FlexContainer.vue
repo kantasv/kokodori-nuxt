@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss" >
 .flex-container {
   margin: 20px;
   display: flex;
