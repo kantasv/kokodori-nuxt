@@ -1,18 +1,15 @@
 <template>
   <div class="vm-wrapper">
     <img src="~/static/vending_machine.png" class="vending-machine">
-    <img v-if="iconType=='chat'" src="~/static/chat.png" class="statusIcon">
-    <img v-if="iconType=='asap'" src="~/static/asap.png" class="statusIcon">
-    <img v-if="iconType=='info'" src="~/static/info.png" class="statusIcon">
+    <img v-if="icontype=='chat'" src="~/static/chat.png" class="statusIcon">
+    <img v-if="icontype=='asap'" src="~/static/asap.png" class="statusIcon">
+    <img v-if="icontype=='info'" src="~/static/info.png" class="statusIcon">
   </div>
 </template>
 
 <style lang="scss">
   body{
     width:130px;
-  }
-  .vm-wrapper{
-    background-color: chartreuse;
   }
   .vending-machine{
     height: 80px;
@@ -24,9 +21,10 @@
 
 <script>
 export default {
-  data () {
-    return {
-      iconType: 'asap'
+  props: {
+    icontype: {
+      type: String,
+      required: true
     }
   }
 }
