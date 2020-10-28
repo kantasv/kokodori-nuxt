@@ -4,11 +4,8 @@
       <div class="header-title">
         <h1>{{ headertitle }}</h1>
       </div>
-      <p>
-        <span class="setting-logo-container">
-          <img src="~assets/baseline_settings_black_48dp.png" width="50px" height="50px">
-        </span>
-      </p>
+      <nuxt-link v-if=" icontype=='open' " tag="img" to="/Menu" :src="require('~/static/hamb_menu.png')" class="setting-logo-container" />
+      <nuxt-link v-if=" icontype=='close' " tag="img" to="/" :src="require('~/static/close.png')" class="setting-logo-container" />
     </div>
     <div class="header-dammy-space" />
   </div>
@@ -29,10 +26,11 @@
 }
 
 .setting-logo-container {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
   position: fixed;
-  z-index: 100;
+  z-index: 10000;
   top: 0;
   right: 0;
 }
@@ -62,6 +60,11 @@ export default {
     headertitle: {
       type: String,
       required: true
+    },
+    icontype: {
+      type: String,
+      required: false,
+      default: 'open'
     }
   }
 }
