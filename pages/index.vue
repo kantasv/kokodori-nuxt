@@ -14,7 +14,6 @@
     <FlexContainer label1="検索" label2="決済" />
     <FlexContainer label1="イベント" label2="ランキング" />
     -->
-    <TextButton buttonlabel="お問い合わせ" class="contact-us-button" />
     <nuxt-link to="/PaymentSelection">
       <TextButton buttonlabel="かんたん決済" class="payment-selection-button" />
     </nuxt-link>
@@ -58,12 +57,6 @@
   position: absolute;
   left:200px;
   top:190px;
-}
-
-.contact-us-button{
-  position: fixed;
-  bottom: 80px;
-  left: 10px;
 }
 
 .payment-selection-button{
