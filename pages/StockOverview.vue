@@ -10,15 +10,23 @@
       </p>
       <div class="stock-info-container">
         <p>堺ウォーター株「沼から取れた天然水」</p>
-        <img src="~/static/bousai_water.png" class="almost-outofstock-product-image">
+        <div class="almost-outofstock-product-image-wrapper">
+          <p>
+            <img src="~/static/bousai_water.png" class="almost-outofstock-product-image">
+            <span class="stock-description stock-description-almost-none">残り2本 180円</span>
+          </p>
+        </div>
       </div>
-      <p>残り<span class="stock-amount">2</span>本！</p>
-      <h1 class="stock-status">
-        在庫ぎれ直前
-      </h1>
-      <h6 class="stock-overall-status">
-        他のドリンクは十分に在庫があります
-      </h6>
+      <div class="stock-info-container">
+        <p>フューチャービバレッジ株「Hey麦茶！」</p>
+        <div class="almost-outofstock-product-image-wrapper">
+          <p>
+            <img src="~/static/petbottle_tea.png" class="almost-outofstock-product-image">
+            <span class="stock-description stock-description-sufficient">残り189本 80円(セール中)</span>
+          </p>
+        </div>
+      </div>
+      <TextButton buttonlabel="もっと見る" class="read-more-button" />
 
       <nuxt-link to="/">
         <img src="~/static/close.png" alt class="close-button-image">
@@ -39,32 +47,52 @@
   border: 2px solid #f6cf69;
 }
 
-.stock-status{
-  color:red;
+.almost-outofstock-product-image-wrapper{
+  height: 90px;
 }
 
 .almost-outofstock-product-image{
-  height: 100px;
+  height: 90px;
+  vertical-align:middle;
 }
 
 .stock-info-container{
     background-color: #f6cf69;
+    border: 2px solid #fbe488;
 }
 
 .close-button-image{
-  margin: 30px;
+  margin: 20px;
   width:50px;
-}
-
-.stock-amount{
-  font-weight: bold;
-  color: red;
 }
 
 .stock-overall-status{
   color: green;
 }
+
+.read-more-button{
+  margin: 5px auto;
+}
+
+.stock-description{
+  vertical-align:middle;
+}
+
+.stock-description-almost-none{
+  color: red;
+}
+
+.stock-description-sufficient{
+  color:green;
+}
 </style>
 
 <script>
+import TextButton from '~/components/TextButton.vue'
+
+export default {
+  components: {
+    TextButton
+  }
+}
 </script>

@@ -2,8 +2,8 @@
   <div>
     <KokodoriHeader headertitle="メニュー" icontype="close" />
     <AdWrapper />
-    <FlexContainer label1="ホーム" label2="ランキング" />
-    <FlexContainer label1="ミッション" label2="設定" />
+    <FlexContainer label1="ホーム" label2="ランキング" link1="/" link2="Ranking" />
+    <FlexContainer label1="ミッション" label2="設定" link1="Mission" link2="/" />
     <TextButton buttonlabel="お問い合わせ" class="contact-us-button" />
   </div>
 </template>

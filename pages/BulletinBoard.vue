@@ -45,7 +45,7 @@
 }
 
 .close-button-image{
-  margin: 30px;
+  margin: 20px;
   width:50px;
 }
 

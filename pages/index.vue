@@ -14,7 +14,7 @@
     </nuxt-link>
   </div>
 </template>
-<style lang="scss" >
+<style lang="scss">
 * {
   margin: 0;
   padding: 0;
