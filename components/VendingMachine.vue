@@ -5,7 +5,6 @@
     </nuxt-link>
     <img v-if="icontype=='chat'" src="~/static/chat.png" class="statusIcon">
     <img v-if="icontype=='asap'" src="~/static/asap.png" class="statusIcon">
-    <img v-if="icontype=='info'" src="~/static/info.png" class="statusIcon">
   </div>
 </template>
 

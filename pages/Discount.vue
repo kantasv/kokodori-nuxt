@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <KokodoriHeader headertitle="お急ぎセール" />
+    <KokodoriHeader headertitle="セール情報" />
     <AdWrapper />
     <DiscountContainer />
   </div>

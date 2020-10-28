@@ -5,15 +5,10 @@
     <nuxt-link to="/BulletinBoard">
       <VendingMachine icontype="chat" class="vm-1" />
     </nuxt-link>
-    <VendingMachine icontype="info" class="vm-2" />
+    <VendingMachine icontype="none" class="vm-2" />
     <nuxt-link to="/Discount">
       <VendingMachine icontype="asap" class="vm-3" />
     </nuxt-link>
-
-    <!--
-    <FlexContainer label1="検索" label2="決済" />
-    <FlexContainer label1="イベント" label2="ランキング" />
-    -->
     <nuxt-link to="/PaymentSelection">
       <TextButton buttonlabel="かんたん決済" class="payment-selection-button" />
     </nuxt-link>
