@@ -2,7 +2,7 @@
   <div>
     <div class="header">
       <div class="header-title">
-        <h1>ココドリ</h1>
+        <h1>{{ headertitle }}</h1>
       </div>
       <p>
         <span class="setting-logo-container">
@@ -55,3 +55,14 @@
   height: 50px;
 }
 </style>
+
+<script>
+export default {
+  props: {
+    headertitle: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>

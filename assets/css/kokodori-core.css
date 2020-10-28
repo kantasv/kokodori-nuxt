@@ -1,0 +1,5 @@
+body {
+    background-color: #fffacc;
+    background-image: url('~static/map.jpg');
+    background-size: cover;
+  }

@@ -1,6 +1,8 @@
 <template>
   <div class="vm-wrapper">
-    <img src="~/static/vending_machine.png" class="vending-machine">
+    <nuxt-link to="/StockOverview">
+      <img src="~/static/vending_machine.png" class="vending-machine">
+    </nuxt-link>
     <img v-if="icontype=='chat'" src="~/static/chat.png" class="statusIcon">
     <img v-if="icontype=='asap'" src="~/static/asap.png" class="statusIcon">
     <img v-if="icontype=='info'" src="~/static/info.png" class="statusIcon">
@@ -8,9 +10,6 @@
 </template>
 
 <style lang="scss">
-  body{
-    width:130px;
-  }
   .vending-machine{
     height: 80px;
   }
