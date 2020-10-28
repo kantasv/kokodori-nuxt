@@ -2,28 +2,33 @@
   <div>
     <KokodoriHeader headertitle="商品検索" />
     <AdWrapper />
+    <input v-model="query" type="input" class="query-bar" placeholder="検索ワードを入力">
     <div class="stock-container">
-      <h2>「{{ query }}」の検索結果</h2>
-      <input v-model="query" type="input">
-      <div v-show="isMatched('堺ウォーター株「沼から取れた天然水」')" class="stock-info-container">
-        <p>堺ウォーター株「沼から取れた天然水」おみずお水てんねんすい</p>
+      <h2 v-if=" query ">
+        「{{ query }}」の検索結果
+      </h2>
+      <span v-else>
+        <h3>キーワードを入力してください</h3>
+        <h4>例：堺ウォータ</h4>
+      </span>
+      <div v-show="isMatched('堺ウォーター株「沼から取れた天然水」おみずお水てんねんすい')" class="stock-info-container">
+        <p>堺ウォーター株「沼から取れた天然水」</p>
         <div class="almost-outofstock-product-image-wrapper">
           <p>
             <img src="~/static/bousai_water.png" class="almost-outofstock-product-image">
-            <span class="stock-description stock-description-almost-none">残り2本 180円</span>
+            <span class="stock-description stock-description-almost-none">徒歩5分「学生課前自販機」に在庫あり</span>
           </p>
         </div>
       </div>
-      <div v-show="isMatched('フューチャービバレッジ株「Hey麦茶！」')" class="stock-info-container">
-        <p>フューチャービバレッジ株「Hey麦茶！」お茶おちゃティーむぎ</p>
+      <div v-show="isMatched('フューチャービバレッジ株「Hey麦茶！」お茶おちゃティーむぎ')" class="stock-info-container">
+        <p>フューチャービバレッジ株「Hey麦茶！」</p>
         <div class="almost-outofstock-product-image-wrapper">
           <p>
             <img src="~/static/petbottle_tea.png" class="almost-outofstock-product-image">
-            <span class="stock-description stock-description-sufficient">残り189本 80円(セール中)</span>
+            <span class="stock-description stock-description-sufficient">徒歩5分「学生課前自販機」に在庫あり</span>
           </p>
         </div>
       </div>
-      <TextButton buttonlabel="もっと見る" class="read-more-button" />
 
       <nuxt-link to="/">
         <img src="~/static/close.png" alt class="close-button-image">
@@ -94,15 +99,21 @@ export default {
 .stock-description-sufficient{
   color:green;
 }
+
+.query-bar{
+  display: block;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #f6cf69;
+}
 </style>
 
 <script>
-import TextButton from '~/components/TextButton.vue'
-
 export default {
-  components: {
-    TextButton
-  },
   data(){
     return {
       query: ''
@@ -110,7 +121,7 @@ export default {
   },
   methods: {
     isMatched(productInfo){
-      if(productInfo.indexOf(this.query)!=-1){
+      if(productInfo.indexOf(this.query)!=-1&&this.query){
         return true
       }else{
         return false
